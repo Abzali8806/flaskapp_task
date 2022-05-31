@@ -1,0 +1,17 @@
+version: "3.4"
+services:
+  flask_fe:
+    build:
+      context: ./frontend
+    container_name: flask_frontend
+    image: abzali8806/flask_frontend:1.0.0
+    ports:
+      - 8080:8080
+  
+  flask_be:
+    build:
+      context: ./backend
+    container_name: flask_backend
+    image: abzali8806/flask_backend:1.0.0
+    ports:
+      - 5000:5000
